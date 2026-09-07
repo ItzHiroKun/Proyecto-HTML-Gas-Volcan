@@ -1,0 +1,278 @@
+:root {
+    --azul-llama: #1B4B66;
+    --azul-llama-oscuro: #123549;
+    --naranja-llama: #E8871E;
+    --naranja-llama-oscuro: #C46E12;
+    --amarillo-llama: #FFC857;
+    --carbon: #1F2937;
+    --carbon-claro: #2E3A4A;
+    --fondo: #F7F5F0;
+    --fondo-tarjeta: #FFFFFF;
+    --texto: #23282E;
+    --texto-suave: #5B6470;
+    --borde: #E4DFD4;
+    --radio: 10px;
+    --sombra: 0 4px 14px rgba(27, 75, 102, 0.10);
+}
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: var(--fondo);
+    color: var(--texto);
+    margin: 0;
+}
+
+h1, h2, h3, h4, .marca {
+    font-family: 'Poppins', system-ui, sans-serif;
+    color: var(--azul-llama);
+    font-weight: 600;
+}
+
+a { text-decoration: none; }
+
+/* ----------Header público---------- */
+.header-sitio {
+    background-color: var(--azul-llama);
+    padding: 0.9rem 0;
+}
+
+.header-sitio .navbar-brand {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #fff !important;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.header-sitio .navbar-brand .llama {
+    color: var(--naranja-llama);
+}
+
+.header-sitio .nav-link {
+    color: #E9EEF2 !important;
+    font-weight: 500;
+    margin-left: 0.4rem;
+}
+
+.header-sitio .nav-link:hover,
+.header-sitio .nav-link.active {
+    color: var(--naranja-llama) !important;
+}
+
+.btn-flama {
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 0.55rem 1.4rem;
+    border-radius: var(--radio);
+    transition: background-color 0.15s ease;
+    background-color: var(--naranja-llama);
+}
+
+.btn-flama:hover {
+    color: #fff;
+    background-color: var(--naranja-llama-oscuro);
+}
+
+.btn-flama-outline {
+    border: 2px solid var(--naranja-llama);
+    color: var(--naranja-llama);
+    font-weight: 600;
+    padding: 0.5rem 1.3rem;
+    border-radius: var(--radio);
+    background-color: transparent;
+}
+
+.btn-flama-outline:hover {
+    color: #fff;
+    background-color: var(--naranja-llama);
+}
+
+/* ----------Hero---------- */
+.hero {
+    color: #fff;
+    padding: 4rem 0;
+    background: linear-gradient(135deg, var(--azul-llama) 0%, var(--azul-llama-oscuro) 100%);
+}
+
+.hero h1 {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    max-width: 45ch;
+    color: #DCE7EE;
+}
+
+/* ----------Tarjetas de producto / contenido---------- */
+.tarjeta {
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--fondo-tarjeta);
+}
+
+.tarjeta img {
+    height: 170px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.tarjeta .tarjeta-cuerpo {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 1rem 1.1rem 1.2rem;
+}
+
+.tarjeta .categoria {
+    color: var(--naranja-llama);
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    font-size: 0.75rem;
+}
+
+.tarjeta h3 {
+    margin: 0.25rem 0 0.4rem;
+    font-size: 1.05rem;
+}
+
+.tarjeta .precio {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-top: auto;
+    color: var(--azul-llama);
+}
+
+.tarjeta .descripcion {
+    font-size: 0.9rem;
+    color: var(--texto-suave);
+}
+
+/* ----------Secciones generales---------- */
+.seccion {
+    padding: 3.2rem 0;
+}
+
+.seccion-titulo {
+    margin-bottom: 2rem;
+}
+
+.seccion-alterna {
+    background-color: #EFEAE0;
+}
+
+/* ----------Formularios---------- */
+.form-flama label {
+    color: var(--texto);
+    font-weight: 600;
+}
+
+.form-flama .form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(232, 135, 30, 0.2);
+    border-color: var(--naranja-llama);
+}
+
+.mensaje-error {
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+    display: none;
+    color: #C0392B;
+}
+
+.form-flama .is-invalid ~ .mensaje-error,
+.mensaje-error.visible {
+    display: block;
+}
+
+/* ----------Footer---------- */
+.footer-sitio {
+    color: #C9D1D9;
+    padding: 2.2rem 0 1.2rem;
+    margin-top: 2rem;
+    background-color: var(--carbon);
+}
+
+.footer-sitio h4 {
+    font-size: 1rem;
+    color: #fff;
+}
+
+.footer-sitio a {
+    color: #C9D1D9;
+}
+
+.footer-sitio a:hover {
+    color: var(--naranja-llama);
+}
+
+.footer-sitio hr {
+    margin: 1.5rem 0 1rem;
+    border-color: #3A4655;
+}
+
+.footer-sitio .copy {
+    color: #8B96A3;
+    font-size: 0.82rem;
+}
+
+/* ----------Panel administrativo---------- */
+.admin-body {
+    background-color: #EDEFF2;
+}
+
+.admin-sidebar {
+    min-height: 100vh;
+    color: #C9D1D9;
+    padding-top: 1.5rem;
+    background-color: var(--carbon);
+}
+
+.admin-sidebar .marca-admin {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    padding: 0 1.2rem 1.2rem;
+    border-bottom: 1px solid #3A4655;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.admin-sidebar .nav-link {
+    padding: 0.65rem 1.2rem;
+    border-left: 3px solid transparent;
+    color: #C9D1D9;
+}
+
+.admin-sidebar .nav-link:hover,
+.admin-sidebar .nav-link.active {
+    background-color: var(--carbon-claro);
+    border-left-color: var(--naranja-llama);
+    color: #fff;
+}
+
+.admin-contenido {
+    padding: 2rem;
+}
+
+.badge-rol-admin {
+    background-color: var(--azul-llama);
+}
+
+.badge-rol-operadora {
+    background-color: var(--naranja-llama);
+}
+
+.badge-rol-repartidor {
+    background-color: #4A7A55;
+}

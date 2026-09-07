@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Distribuidora de Gas El Volcán</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <!-- Hoja de estilos propia -->
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="header-sitio">
+    <nav class="navbar navbar-expand-lg navbar-dark container">
+      <a class="navbar-brand" href="index.html">
+        <span class="llama">🔥</span> Gas El Volcán
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+        aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="menuPrincipal">
+        <ul class="navbar-nav align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link" href="novedades.html">Novedades</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          <li class="nav-item mt-2 mt-lg-0">
+            <a class="nav-link position-relative" href="seleccion.html" title="Ver selección">
+              🛒
+              <span class="badge rounded-pill" style="background-color: var(--naranja-llama); font-size: 0.65rem;" id="contador-seleccion">0</span>
+            </a>
+          </li>
+          <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+            <a class="btn btn-flama-outline" href="login.html">Iniciar sesión</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="container d-flex flex-column flex-lg-row align-items-center gap-4">
+      <div class="flex-grow-1">
+        <h1>Gas a domicilio, sin salir de casa a pedirlo</h1>
+        <p>Más de 25 años entregando gas licuado en Chillán y comunas aledañas. Ahora puedes hacer tu pedido en línea y seguir el estado de tu entrega en tiempo real.</p>
+        <a href="catalogo.html" class="btn btn-flama btn-lg mt-2">Ver catálogo</a>
+      </div>
+      <div class="flex-shrink-0" style="font-size: 8rem; line-height: 1;">🔥</div>
+    </div>
+  </section>
+
+  <!-- ===================== PRODUCTOS DESTACADOS ===================== -->
+  <section class="seccion">
+    <div class="container">
+      <div class="seccion-titulo text-center">
+        <h2>Productos destacados</h2>
+        <p class="text-muted">Los más pedidos por nuestros clientes</p>
+      </div>
+      <div class="row g-4" id="contenedor-destacados">
+        <!-- Las tarjetas se generan dinámicamente con JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ¿POR QUÉ ELEGIRNOS? ===================== -->
+  <section class="seccion seccion-alterna">
+    <div class="container">
+      <div class="row g-4 text-center">
+        <div class="col-md-4">
+          <h3>🚚 Entrega rápida</h3>
+          <p class="text-muted">Cobertura en Chillán y comunas cercanas, con tiempos estimados claros por zona.</p>
+        </div>
+        <div class="col-md-4">
+          <h3>📍 Seguimiento del pedido</h3>
+          <p class="text-muted">Revisa el estado de tu entrega sin necesidad de llamar por teléfono.</p>
+        </div>
+        <div class="col-md-4">
+          <h3>✅ Pago registrado</h3>
+          <p class="text-muted">Cada pago queda respaldado automáticamente al confirmar la entrega.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer-sitio">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h4>Gas El Volcán</h4>
+          <p class="small">Distribución de gas licuado a domicilio en Chillán, Región de Ñuble, desde 1998.</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Enlaces</h4>
+          <ul class="list-unstyled">
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h4>Contacto</h4>
+          <p class="small mb-0">📞 (42) 234 5678<br>📧 contacto@gaselvolcan.cl<br>📍 Chillán, Región de Ñuble</p>
+        </div>
+      </div>
+      <hr>
+      <p class="copy mb-0">© 2026 Distribuidora de Gas El Volcán. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (para el menú hamburguesa) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Datos y lógica -->
+  <script src="js/datos.js"></script>
+  <script src="js/seleccion.js"></script>
+  <script>
+    // Muestra 4 productos destacados en la página de inicio,
+    // generados dinámicamente desde el arreglo "productos" (datos.js)
+    const contenedorDestacados = document.getElementById("contenedor-destacados");
+    const destacados = productos.slice(0, 4);
+
+    destacados.forEach(function (producto) {
+      const columna = document.createElement("div");
+      columna.className = "col-sm-6 col-lg-3";
+      columna.innerHTML = `
+        <div class="tarjeta">
+          <img src="${producto.imagen}" alt="${producto.nombre}" onerror="this.src='https://placehold.co/400x300/1B4B66/FFFFFF?text=Gas+El+Volc%C3%A1n'">
+          <div class="tarjeta-cuerpo">
+            <span class="categoria">${producto.categoria}</span>
+            <h3>${producto.nombre}</h3>
+            <p class="descripcion">${producto.descripcion}</p>
+            <span class="precio">$${producto.precio.toLocaleString("es-CL")}</span>
+          </div>
+        </div>
+      `;
+      contenedorDestacados.appendChild(columna);
+    });
+  </script>
+</body>
+</html>
