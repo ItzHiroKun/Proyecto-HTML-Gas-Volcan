@@ -1,5 +1,4 @@
 /* ===========================================================
-    seleccion.js
     Funciones núcleo del carrito de selección, guardado en
     LocalStorage bajo la clave "seleccionGas".
     Se incluye en cualquier página que necesite agregar,

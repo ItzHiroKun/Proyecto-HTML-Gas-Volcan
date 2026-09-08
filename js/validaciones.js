@@ -1,5 +1,4 @@
 /* ===========================================================
-validaciones.js
 Funciones de validación reutilizables para los formularios
 de registro, login y contacto.
 =========================================================== */

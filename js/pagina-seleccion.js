@@ -1,5 +1,4 @@
 /* ===========================================================
-    pagina-seleccion.js
     Renderiza la tabla de la selección (carrito), permite
     cambiar cantidades, quitar productos y calcular totales.
     Depende de las funciones de seleccion.js.

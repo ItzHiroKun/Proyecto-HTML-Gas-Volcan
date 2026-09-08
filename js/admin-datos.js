@@ -1,7 +1,6 @@
 /* ===========================================================
-admin-datos.js
 Como no hay base de datos, las ediciones del panel admin
-se guardan como un "overlay" en LocalStorage y se combinan
+se guardan en LocalStorage y se combinan
 con el arreglo original "productos" (datos.js) al mostrarlo.
 =========================================================== */
 

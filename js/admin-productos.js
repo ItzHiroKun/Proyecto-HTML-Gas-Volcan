@@ -1,6 +1,6 @@
 /* ===========================================================
 admin-productos.js
-Lista el catálogo (con ediciones aplicadas) y permite editar
+Lista el catálogo y permite editar
 precio/stock a través de un modal, guardando en LocalStorage.
 =========================================================== */
 

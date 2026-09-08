@@ -1,5 +1,4 @@
 /* ===========================================================
-registro.js
 Valida el formulario de registro y guarda el nuevo usuario
 en LocalStorage bajo la clave "usuariosGas".
 =========================================================== */

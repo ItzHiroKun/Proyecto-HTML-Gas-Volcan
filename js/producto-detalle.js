@@ -2,7 +2,6 @@
 Lee el parámetro "codigo" de la URL (?codigo=CL002),
 busca el producto en el arreglo "productos" (datos.js)
 y renderiza su vista de detalle.
-producto-detalle.js
    =========================================================== */
 
 const parametrosURL = new URLSearchParams(window.location.search);
