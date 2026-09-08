@@ -1,0 +1,37 @@
+/* ===========================================================
+admin-datos.js
+Como no hay base de datos, las ediciones del panel admin
+se guardan como un "overlay" en LocalStorage y se combinan
+con el arreglo original "productos" (datos.js) al mostrarlo.
+=========================================================== */
+
+const CLAVE_PRODUCTOS_EDITADOS = "productosEditadosGas";
+
+// Lee las ediciones guardadas (objeto indexado por código de producto)
+function obtenerEdicionesProductos() {
+    const datos = localStorage.getItem(CLAVE_PRODUCTOS_EDITADOS);
+    return datos ? JSON.parse(datos) : {};
+}
+
+// Devuelve el catálogo completo, aplicando las ediciones guardadas sobre el original
+function obtenerProductosConEdiciones() {
+    const ediciones = obtenerEdicionesProductos();
+    return productos.map(function (producto) {
+        const edicion = ediciones[producto.codigo];
+        return edicion ? Object.assign({}, producto, edicion) : producto;
+    });
+}
+
+// Guarda o actualiza la edición de un producto puntual
+function guardarEdicionProducto(codigo, cambios) {
+    const ediciones = obtenerEdicionesProductos();
+    ediciones[codigo] = Object.assign({}, ediciones[codigo], cambios);
+    localStorage.setItem(CLAVE_PRODUCTOS_EDITADOS, JSON.stringify(ediciones));
+}
+
+// Elimina cualquier edición guardada de un producto (vuelve a sus datos originales)
+function restaurarProductoOriginal(codigo) {
+    const ediciones = obtenerEdicionesProductos();
+    delete ediciones[codigo];
+    localStorage.setItem(CLAVE_PRODUCTOS_EDITADOS, JSON.stringify(ediciones));
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mantenedor de usuarios — Gas El Volcán</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body class="admin-body">
+    
+    <div class="d-flex">
+        <!-- ===================== SIDEBAR ===================== -->
+    <aside class="admin-sidebar" style="width: 240px;">
+      <div class="marca-admin">🔥 Gas El Volcán<br><span class="small fw-normal">Panel administrativo</span></div>
+      <nav class="nav flex-column">
+          <a class="nav-link" href="admin-inicio.html">📊 Inicio</a>
+          <a class="nav-link" href="admin-productos.html">📦 Productos</a>
+          <a class="nav-link active" href="admin-usuarios.html">👥 Usuarios</a>
+          <a class="nav-link" href="../index.html">← Volver al sitio</a>
+        </nav>
+    </aside>
+    
+    <!-- ===================== CONTENIDO ===================== -->
+    <main class="flex-grow-1 admin-contenido">
+        <div class="d-flex justify-content-between align-items-center mb-1 flex-wrap gap-2">
+            <h1 class="mb-0">Mantenedor de usuarios</h1>
+            <button class="btn btn-flama" data-bs-toggle="modal" data-bs-target="#modalNuevoUsuario">
+                + Nuevo usuario interno
+            </button>
+        </div>
+        <p class="text-muted mb-4">Usuarios registrados desde el sitio público, más los usuarios internos creados aquí.</p>
+        
+        <div class="tarjeta p-3">
+            <div class="table-responsive">
+                <table class="table align-middle mb-0">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Correo</th>
+                            <th>RUN</th>
+                            <th>Rol</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpo-tabla-usuarios">
+                        <!-- Filas generadas dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <p class="text-muted small mb-0 mt-3 d-none" id="mensaje-sin-usuarios">
+                Aún no hay usuarios registrados. Cuando alguien se registre desde el sitio, aparecerá aquí.
+            </p>
+        </div>
+    </main>
+</div>
+
+<!-- ===================== MODAL: NUEVO USUARIO INTERNO ===================== -->
+<div class="modal fade" id="modalNuevoUsuario" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Nuevo usuario interno</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <form id="form-nuevo-usuario">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="nuevo-nombres" class="form-label">Nombres</label>
+                        <input type="text" class="form-control" id="nuevo-nombres" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nuevo-correo" class="form-label">Correo</label>
+                        <input type="email" class="form-control" id="nuevo-correo" required>
+                        <div class="mensaje-error" id="error-nuevo-correo"></div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nuevo-run" class="form-label">RUN</label>
+                        <input type="text" class="form-control" id="nuevo-run" placeholder="12345678-9" required>
+                        <div class="mensaje-error" id="error-nuevo-run"></div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nuevo-rol" class="form-label">Rol</label>
+                        <select class="form-select" id="nuevo-rol" required>
+                            <option value="Operadora">Operadora</option>
+                            <option value="Repartidor">Repartidor</option>
+                            <option value="Administrador">Administrador</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-flama">Crear usuario</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/datos.js"></script>
+<script src="../js/validaciones.js"></script>
+<script src="../js/admin-usuarios.js"></script>
+</body>
+</html>
